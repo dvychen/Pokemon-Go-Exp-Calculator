@@ -22,15 +22,32 @@ cap = raw_input("How much exp do you need in total to level up?")
 accumulated = raw_input("How much exp have you accumulated so far?")
 expneeded = int(cap) - int(accumulated)
 
+pktoevolve = rtnh(expneeded) // 500
+pktocatch = rtnh(expneeded) / 100
 
-print "Ok, so you'll need to catch %s more pokemon or evolve %s more pokemon." % (rtnh(expneeded)/100, rtnh(expneeded)/500)
+lol = rtnh(expneeded) % 500
+pktosituational = lol / 100
+
+if rtnh(expneeded) % 500 == 0:
+    print "Ok, so you'll need to catch %s more pokemon or evolve/discover %s more pokemon." % (pktocatch, pktoevolve)
+elif rtnh(expneeded) % 500 != 0 and pktoevolve != 0:
+    print "Ok, so you'll need to catch %s more pokemon or catch %s more pokemon and evolve/discover %s pokemon." % (pktocatch, pktosituational, pktoevolve)
+elif rtnh(expneeded) % 500 != 0 and pktoevolve == 0:
+    print "Ok, so you'll need to catch %s more pokemon." % (pktocatch)
 
 
 
 
 
 
+"""
+Note to self:
+Add a "menu" that let's you choose which mode;
+-Current one (most efficient way)
+-One where you only catch one type of pokemon, displaying as if you transfer all the pokemon and evolve only that type
 
+Add more!
+"""
 
 
 
@@ -48,20 +65,20 @@ print "Ok, so you'll need to catch %s more pokemon or evolve %s more pokemon." %
         return
 #Two digits
     elif rofl > 9 and rofl < 100:
-        return 
+        return
 #Three digits
     elif rofl > 99 and rofl < 1000:
-        return 
+        return
 #Four digits
     elif rofl > 999 and rofl < 10000:
-        return 
+        return
 #Five digits
     elif rofl > 9999 and rofl < 100000:
-        return 
+        return
 #Six digits
     elif rofl > 99999 and rofl < 1000000:
-        return 
+        return
 #N/A
     else:
-        return "Sorry, that is not a valid response."    
+        return "Sorry, that is not a valid response."
 """
