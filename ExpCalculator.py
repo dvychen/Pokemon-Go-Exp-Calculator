@@ -9,7 +9,7 @@ def rtnh(rofl):
         return 100
     #Three digits
     elif rofl > 99:
-        return math.ceil(rofl//100) * 100
+        return math.ceil(rofl/100) * 100
 
     #N/A
     else:
