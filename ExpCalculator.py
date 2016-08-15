@@ -66,11 +66,17 @@ elif choice == "Smart" or choice == "Catching and evolving one Pokemon" choice =
     sistep = sestep/fifstep
     sevstep = sestep % fifstep
     
+    
     pktocatchtwo = fifstep * thstep + sevstep
     pktoevolvetwo = fifstep
     
-    print "Ok, so you\'ll need to catch %s more pokemon and evolve %s of them." % (pktocatchtwo, pktoevolvetwo)
+    if pktocatchtwo > pktoevolve and pktoevolve >= 0:
+        print "Ok, so you\'ll need to catch %s more pokemon and evolve %s of them." % (pktocatchtwo, pktoevolvetwo)
+    else:
+        print "Oops, something went wrong! Please contact me to fix this."
     
+
+
 
 
 
@@ -92,13 +98,6 @@ if pokename == "Pidgey" or pokename == "Weedle"....:
     candiesneeded = 12
 elif pokename == "Rattata
 """
-
-
-
-
-
-
-
 
 
 
