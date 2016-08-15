@@ -37,10 +37,11 @@ pktosituational = lol / 100
 
 #Variables for choice 2 (Smart/Catching one type of pokemon)
 fistep = rtnh(expneeded)
+#sestep is how many pokemon to catch, ex: 4800exp --> 48 pokemon to catch
 sestep = fstep/100
+#thstep and thpofistep are useless here, just filler, may remove later
 thstep = sestep//5
-thpofistep = sestep 
-fostep = 
+thpofistep = sestep % 5
 
 
 
@@ -51,17 +52,24 @@ if choice == "Basic" or choice == "Got all the candy" or choice == "Basic/Got al
         print "Ok, so you\'ll need to catch %s more pokemon or catch %s more pokemon and evolve/discover %s pokemon." % (pktocatch, pktosituational, pktoevolve)
     elif pktoevolve < 0:
         print "Ok, so you\'ll need to catch %s more pokemon." % (pktocatch)
+    else:
+        print "Uh oh! You just discovered a bug! Please contact me about this, thanks!"
 
 
 elif choice == "Smart" or choice == "Catching and evolving one Pokemon" choice == "Smart/Catching and Evolving one Pokemon" or choice == "2. Smart/Catching and Evolving one Pokemon" or choice == "2":
     candiesneeded = raw_input("How many candies do you need per evolution?")
     
-    if rtnh(expneeded) % 500 == 0 and :
-        print "Ok, so you\'ll need to catch %s more pokemon and evolve %s of them." % (
-    elif rtnh(expneeded) % 500 != 0 and pktoevolve != 0:
-        print "
-    elif pktoevolve < 0:
-        print "Ok, so you'll need to catch %s more pokemon." % (pktocatch)
+    pktocatchtoevolve = candiesneeded/4
+    thstep = sestep//pktocatchtoevolve
+    fostep = thstep + 1
+    fifstep = sestep/fostep
+    sistep = sestep/fifstep
+    sevstep = sestep % fifstep
+    
+    pktocatchtwo = fifstep * thstep + sevstep
+    pktoevolvetwo = fifstep
+    
+    print "Ok, so you\'ll need to catch %s more pokemon and evolve %s of them." % (pktocatchtwo, pktoevolvetwo)
     
 
 
