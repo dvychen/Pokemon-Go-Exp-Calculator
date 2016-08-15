@@ -27,28 +27,41 @@ cap = raw_input("How much exp do you need in total to level up?")
 accumulated = raw_input("How much exp have you accumulated so far?")
 expneeded = int(cap) - int(accumulated)
 
+
+#Variables for choice 1 (Basic/Got all the candy)
 pktoevolve = rtnh(expneeded) // 500
 pktocatch = rtnh(expneeded) / 100
 
 lol = rtnh(expneeded) % 500
 pktosituational = lol / 100
 
+#Variables for choice 2 (Smart/Catching one type of pokemon)
+fistep = rtnh(expneeded)
+sestep = fstep/100
+thstep = sestep//5
+thpofistep = sestep 
+fostep = 
+
+
 
 if choice == "Basic" or choice == "Got all the candy" or choice == "Basic/Got all the candy" or choice == "1. Basic/Got all the candy" or choice == "1":
     if rtnh(expneeded) % 500 == 0:
-        print "Ok, so you'll need to catch %s more pokemon or evolve/discover %s more pokemon." % (pktocatch, pktoevolve)
+        print "Ok, so you\'ll need to catch %s more pokemon or evolve/discover %s more pokemon." % (pktocatch, pktoevolve)
     elif rtnh(expneeded) % 500 != 0 and pktoevolve != 0:
-        print "Ok, so you'll need to catch %s more pokemon or catch %s more pokemon and evolve/discover %s pokemon." % (pktocatch, pktosituational, pktoevolve)
-    elif rtnh(expneeded) % 500 != 0 and pktoevolve == 0:
-        print "Ok, so you'll need to catch %s more pokemon." % (pktocatch)
+        print "Ok, so you\'ll need to catch %s more pokemon or catch %s more pokemon and evolve/discover %s pokemon." % (pktocatch, pktosituational, pktoevolve)
+    elif pktoevolve < 0:
+        print "Ok, so you\'ll need to catch %s more pokemon." % (pktocatch)
+
 
 elif choice == "Smart" or choice == "Catching and evolving one Pokemon" choice == "Smart/Catching and Evolving one Pokemon" or choice == "2. Smart/Catching and Evolving one Pokemon" or choice == "2":
-    if rtnh(expneeded) % 500 == 0:
-        print "
+    candiesneeded = raw_input("How many candies do you need per evolution?")
+    
+    if rtnh(expneeded) % 500 == 0 and :
+        print "Ok, so you\'ll need to catch %s more pokemon and evolve %s of them." % (
     elif rtnh(expneeded) % 500 != 0 and pktoevolve != 0:
         print "
-    elif rtnh(expneeded) % 500 != 0 and pktoevolve == 0:
-        print "
+    elif pktoevolve < 0:
+        print "Ok, so you'll need to catch %s more pokemon." % (pktocatch)
     
 
 
@@ -61,8 +74,15 @@ Note to self:
 Add a "menu" that let's you choose which mode;
 -Current one (most efficient way)
 -One where you only catch one type of pokemon, displaying as if you transfer all the pokemon and evolve only that type
-
 Add more!
+
+Eventually insert number of candies needed to evolve a pokemon, like they insert a pokemon, and code accesses databank and 
+finds the right number of candies for that pokemon to evolve.
+example:
+pokename = raw_input("What pokemon will you be catching?")
+if pokename == "Pidgey" or pokename == "Weedle"....:
+    candiesneeded = 12
+elif pokename == "Rattata
 """
 
 
