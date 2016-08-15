@@ -16,7 +16,12 @@ def rtnh(rofl):
         return "Sorry, that is not a valid response."
 
 
-print "Yo what\'s up, mate?"
+print "Welcome to the Pokemon Go Exp Calculator!"
+print "Main Menu"
+print "1. Basic/Got all the candy"
+print "2. Smart/Catching and Evolving one Pokemon"
+choice = raw_input("Which mode would you like to use?"
+
 
 cap = raw_input("How much exp do you need in total to level up?")
 accumulated = raw_input("How much exp have you accumulated so far?")
@@ -28,12 +33,23 @@ pktocatch = rtnh(expneeded) / 100
 lol = rtnh(expneeded) % 500
 pktosituational = lol / 100
 
-if rtnh(expneeded) % 500 == 0:
-    print "Ok, so you'll need to catch %s more pokemon or evolve/discover %s more pokemon." % (pktocatch, pktoevolve)
-elif rtnh(expneeded) % 500 != 0 and pktoevolve != 0:
-    print "Ok, so you'll need to catch %s more pokemon or catch %s more pokemon and evolve/discover %s pokemon." % (pktocatch, pktosituational, pktoevolve)
-elif rtnh(expneeded) % 500 != 0 and pktoevolve == 0:
-    print "Ok, so you'll need to catch %s more pokemon." % (pktocatch)
+
+if choice == "Basic" or choice == "Got all the candy" or choice == "Basic/Got all the candy" or choice == "1. Basic/Got all the candy" or choice == "1":
+    if rtnh(expneeded) % 500 == 0:
+        print "Ok, so you'll need to catch %s more pokemon or evolve/discover %s more pokemon." % (pktocatch, pktoevolve)
+    elif rtnh(expneeded) % 500 != 0 and pktoevolve != 0:
+        print "Ok, so you'll need to catch %s more pokemon or catch %s more pokemon and evolve/discover %s pokemon." % (pktocatch, pktosituational, pktoevolve)
+    elif rtnh(expneeded) % 500 != 0 and pktoevolve == 0:
+        print "Ok, so you'll need to catch %s more pokemon." % (pktocatch)
+
+elif choice == "Smart" or choice == "Catching and evolving one Pokemon" choice == "Smart/Catching and Evolving one Pokemon" or choice == "2. Smart/Catching and Evolving one Pokemon" or choice == "2":
+    if rtnh(expneeded) % 500 == 0:
+        print "
+    elif rtnh(expneeded) % 500 != 0 and pktoevolve != 0:
+        print "
+    elif rtnh(expneeded) % 500 != 0 and pktoevolve == 0:
+        print "
+    
 
 
 
