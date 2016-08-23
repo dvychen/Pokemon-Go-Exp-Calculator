@@ -88,15 +88,17 @@ Note to self:
 Add a "menu" that let's you choose which mode;
 -Current one (most efficient way)
 -One where you only catch one type of pokemon, displaying as if you transfer all the pokemon and evolve only that type
+-One where calculates how many more of pokemon you'll need to catch to evolve into final evolution (counting 4 per catch and
+transfering ALL the ones currently possess / choosing how many of current to transfer)
 Add more!
 
 Eventually insert number of candies needed to evolve a pokemon, like they insert a pokemon, and code accesses databank and 
 finds the right number of candies for that pokemon to evolve.
 example:
 pokename = raw_input("What pokemon will you be catching?")
-if pokename == "Pidgey" or pokename == "Weedle"....:
-    candiesneeded = 12
-elif pokename == "Rattata
+pokelist = ["Rattata", "Pidgey", "Weedle"...]
+pokemon_list_candy = [12, 25, 50...]
+if 
 """
 
 
