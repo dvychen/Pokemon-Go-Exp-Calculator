@@ -96,7 +96,7 @@ Eventually insert number of candies needed to evolve a pokemon, like they insert
 finds the right number of candies for that pokemon to evolve.
 example:
 pokename = raw_input("What pokemon will you be catching?")
-pokelist = ["Rattata", "Pidgey", "Weedle"...]
+pokedict = {"Rattata", "Pidgey", "Weedle"...}
 pokemon_list_candy = [12, 25, 50...]
 if 
 """
