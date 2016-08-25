@@ -20,7 +20,7 @@ print "Welcome to the Pokemon Go Exp Calculator!"
 print "Main Menu"
 print "1. Basic/Got all the candy"
 print "2. Smart/Catching and Evolving one Pokemon"
-choice = raw_input("Which mode would you like to use?"
+choice = raw_input("Which mode would you like to use?")
 
 
 cap = raw_input("How much exp do you need in total to level up?")
@@ -38,7 +38,7 @@ pktosituational = lol / 100
 #Variables for choice 2 (Smart/Catching one type of pokemon)
 fistep = rtnh(expneeded)
 #sestep is how many pokemon to catch, ex: 4800exp --> 48 pokemon to catch
-sestep = fstep/100
+sestep = fistep/100
 #thstep and thpofistep are useless here, just filler, may remove later
 thstep = sestep//5
 thpofistep = sestep % 5
@@ -56,10 +56,11 @@ if choice == "Basic" or choice == "Got all the candy" or choice == "Basic/Got al
         print "Uh oh! You just discovered a bug! Please contact me about this, thanks!"
 
 
-elif choice == "Smart" or choice == "Catching and evolving one Pokemon" choice == "Smart/Catching and Evolving one Pokemon" or choice == "2. Smart/Catching and Evolving one Pokemon" or choice == "2":
+elif choice == "Smart" or choice == "Catching and evolving one Pokemon" or choice == "Smart/Catching and Evolving one Pokemon" or choice == "2. Smart/Catching and Evolving one Pokemon" or choice == "2":
     candiesneeded = raw_input("How many candies do you need per evolution?")
+    candiesneeded_lol = int(candiesneeded)
     
-    pktocatchtoevolve = candiesneeded/4
+    pktocatchtoevolve = candiesneeded_lol/4
     thstep = sestep//pktocatchtoevolve
     fostep = thstep + 1
     fifstep = sestep/fostep
@@ -74,6 +75,7 @@ elif choice == "Smart" or choice == "Catching and evolving one Pokemon" choice =
         print "Ok, so you\'ll need to catch %s more pokemon and evolve %s of them." % (pktocatchtwo, pktoevolvetwo)
     else:
         print "Oops, something went wrong! Please contact me to fix this."
+    
     
 
 
