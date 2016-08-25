@@ -13,19 +13,20 @@ def rtnh(rofl):
 
     #N/A
     else:
-        return "Sorry, that is not a valid response."
+        return "ERROR"
 
 
 print "Welcome to the Pokemon Go Exp Calculator!"
 print "Main Menu"
 print "1. Basic/Got all the candy"
 print "2. Smart/Catching and Evolving one Pokemon"
-choice = raw_input("Which mode would you like to use?")
+choice = raw_input("Which mode would you like to use? ")
 
 
-cap = raw_input("How much exp do you need in total to level up?")
-accumulated = raw_input("How much exp have you accumulated so far?")
+cap = raw_input("How much exp do you need in total to level up? ")
+accumulated = raw_input("How much exp have you accumulated so far? ")
 expneeded = int(cap) - int(accumulated)
+
 
 
 #Variables for choice 1 (Basic/Got all the candy)
@@ -43,38 +44,42 @@ sestep = fistep/100
 thstep = sestep//5
 thpofistep = sestep % 5
 
-
-
-if choice == "Basic" or choice == "Got all the candy" or choice == "Basic/Got all the candy" or choice == "1. Basic/Got all the candy" or choice == "1":
-    if rtnh(expneeded) % 500 == 0:
-        print "Ok, so you\'ll need to catch %s more pokemon or evolve/discover %s more pokemon." % (pktocatch, pktoevolve)
-    elif rtnh(expneeded) % 500 != 0 and pktoevolve != 0:
-        print "Ok, so you\'ll need to catch %s more pokemon or catch %s more pokemon and evolve/discover %s pokemon." % (pktocatch, pktosituational, pktoevolve)
-    elif pktoevolve < 0:
-        print "Ok, so you\'ll need to catch %s more pokemon." % (pktocatch)
+if int(cap) < int(accumulated):
+    print "Sorry, you could not have accumulated %s exp if you needed %s exp in total." % (accumulated, cap)
+elif int(cap) >= int(accumulated):
+    if choice == "Basic" or choice == "Got all the candy" or choice == "Basic/Got all the candy" or choice == "1. Basic/Got all the candy" or choice == "1":
+        if rtnh(expneeded) % 500 == 0:
+            print "Ok, so you\'ll need to catch %s more pokemon or evolve/discover %s more pokemon." % (pktocatch, pktoevolve)
+        elif rtnh(expneeded) % 500 != 0 and pktoevolve != 0:
+            print "Ok, so you\'ll need to catch %s more pokemon or catch %s more pokemon and evolve/discover %s pokemon." % (pktocatch, pktosituational, pktoevolve)
+        elif pktoevolve < 0:
+            print "Ok, so you\'ll need to catch %s more pokemon." % (pktocatch)
+        else:
+            print "Sorry, that is not a valid choice!"
+    
+    
+    elif choice == "Smart" or choice == "Catching and evolving one Pokemon" or choice == "Smart/Catching and Evolving one Pokemon" or choice == "2. Smart/Catching and Evolving one Pokemon" or choice == "2":
+        candiesneeded = raw_input("How many candies do you need per evolution? ")
+        candiesneeded_lol = int(candiesneeded)
+        
+        pktocatchtoevolve = candiesneeded_lol/4
+        thstep = sestep//pktocatchtoevolve
+        fostep = thstep + 1
+        fifstep = sestep/fostep
+        sistep = sestep/fifstep
+        sevstep = sestep % fifstep
+        
+        
+        pktocatchtwo = fifstep * thstep + sevstep
+        pktoevolvetwo = fifstep
+        
+        if pktocatchtwo > pktoevolve and pktoevolve >= 0:
+            print "Ok, so you\'ll need to catch %s more pokemon and evolve %s of them." % (pktocatchtwo, pktoevolvetwo)
+        else:
+            print "Oops, something went wrong! Please contact me to fix this."
     else:
-        print "Uh oh! You just discovered a bug! Please contact me about this, thanks!"
-
-
-elif choice == "Smart" or choice == "Catching and evolving one Pokemon" or choice == "Smart/Catching and Evolving one Pokemon" or choice == "2. Smart/Catching and Evolving one Pokemon" or choice == "2":
-    candiesneeded = raw_input("How many candies do you need per evolution?")
-    candiesneeded_lol = int(candiesneeded)
-    
-    pktocatchtoevolve = candiesneeded_lol/4
-    thstep = sestep//pktocatchtoevolve
-    fostep = thstep + 1
-    fifstep = sestep/fostep
-    sistep = sestep/fifstep
-    sevstep = sestep % fifstep
-    
-    
-    pktocatchtwo = fifstep * thstep + sevstep
-    pktoevolvetwo = fifstep
-    
-    if pktocatchtwo > pktoevolve and pktoevolve >= 0:
-        print "Ok, so you\'ll need to catch %s more pokemon and evolve %s of them." % (pktocatchtwo, pktoevolvetwo)
-    else:
-        print "Oops, something went wrong! Please contact me to fix this."
+        print "Sorry, that is not a valid mode."
+        
     
     
 
