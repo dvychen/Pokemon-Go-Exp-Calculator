@@ -77,34 +77,3 @@ elif int(cap) >= int(accumulated):
         print "Sorry, that is not a valid mode."
         
     
-    
-
-
-
-
-
-
-
-""" How to tell how many digits
-#One digit
-    if rofl > 0 and rofl < 10:
-        return
-#Two digits
-    elif rofl > 9 and rofl < 100:
-        return
-#Three digits
-    elif rofl > 99 and rofl < 1000:
-        return
-#Four digits
-    elif rofl > 999 and rofl < 10000:
-        return
-#Five digits
-    elif rofl > 9999 and rofl < 100000:
-        return
-#Six digits
-    elif rofl > 99999 and rofl < 1000000:
-        return
-#N/A
-    else:
-        return "Sorry, that is not a valid response."
-"""
