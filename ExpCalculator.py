@@ -99,6 +99,9 @@ Add a "menu" that let's you choose which mode;
 transfering ALL the ones currently possess / choosing how many of current to transfer)
 Add more!
 
+
+MAKE IT SO IT TAKES THE ANSWER CHOICE OF MODE DE-CAPITALIZED SO IT DOES NOT MATTER HOW THE CAPITILIZATION IS!!
+
 Eventually insert number of candies needed to evolve a pokemon, like they insert a pokemon, and code accesses databank and 
 finds the right number of candies for that pokemon to evolve.
 example:
