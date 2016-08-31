@@ -16,6 +16,17 @@ MAKE IT SO IT TAKES THE ANSWER CHOICE OF MODE DE-CAPITALIZED SO IT DOES NOT MATT
 Eventually insert number of candies needed to evolve a pokemon, like they insert a pokemon, and code accesses databank and 
 finds the right number of candies for that pokemon to evolve.
 example:
-pokename = raw_input("What pokemon will you be catching?")
-pokedict = {"pidgey" : 12, "weedle" : 12, caterpie : 12, }
+pokename = raw_input("What pokemon will you be catching?").lower()
+pokedict = {
+#12 Candies
+'pidgey' : 12, 'weedle' : 12, 'caterpie' : 12, 
+
+#25 Candies
+'bulbasaur' : 25, 'charmander' : 25, 'squirtle' : 25, 'rattata' : 25, 'nidoran' : 25, 'oddish' : 25, 'poliwag' : 25, 'abra' : 25, 'machop' : 25, 'bellsprout' : 25, 'geodude' : 25, 'gastly' : 25, 'eevee' : 25, 'dratini, 
+
+#50 Candies
+'metapod' : 50, 'kakuna' : 50, 'pidgeotto' : 50, 'spearow' : 50, 'ekans' : 50, 'pikachu' : 50, 'sandshrew' : 50, 'clefairy' : 50, 'vulpix' : 50, 'jigglypuff' : 50, 'zubat' : 50, 'paras' : 50, 'venonat' : 50, 'diglett' : 50, 'meowth' : 50, 'psyduck' : 50, 'mankey' : 50, 'grolithe' : 50, 'tentacool' : 50, 'ponyta' : 50, 'slowpoke' : 50, 'magnemite' : 50, 'doduo' : 50, 'seel' : 50, 'grimer' : 50, 'shellder' : 50, 'drowzee' : 50, 'krabby' : 50, 'voltorb' : 50, 'exeggcute' : 50, 'cubone' : 50, 'koffing' : 50, 'rhyhorn' : 50, 'horsea' : 50, 'goldeen' : 50, 'staryu' : 50, 'omanyte' : 50, 'kabuto'
+
+#100 candies... https://pokemongo.gamepress.gg/pokemon-evolution-requirements
+}
 
