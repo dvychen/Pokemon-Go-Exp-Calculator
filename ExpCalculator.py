@@ -1,13 +1,10 @@
 import math
 
 def rtnh(rofl):
-    #One digit
+    #One digit / two digits
     if rofl > 0 and rofl < 10:
         return 100
-    #Two digits
-    elif rofl > 9 and rofl < 100:
-        return 100
-    #Three digits
+    #Three digits or more
     elif rofl > 99:
         return math.ceil(rofl/100) * 100
 
